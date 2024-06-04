@@ -1,0 +1,15 @@
+#RewriteEngine On
+
+#RewriteCond %{REQUEST_URI} !\.(css|js)$
+#RewriteRule ^ index.php [L]
+
+RewriteEngine On
+
+
+RewriteCond %{REQUEST_URI} ^/api/ [NC]
+RewriteRule ^ - [L]
+
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg)$ [NC]
+
+RewriteRule ^ index.php [L]
+
